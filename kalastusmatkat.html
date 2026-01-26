@@ -8,59 +8,65 @@
 </head>
 <body>
 
-    <header>
-        <h1>mmxfishing</h1>
+    <header class="navbar">
+        <div class="logo">mmxfishing</div>
         <nav>
-            <ul>
-                <li><a href="index.html">Etusivu</a></li>
-                <li><a href="opasesittely.html">Opasesittely</a></li>
-                <li><a href="kalastusmatkat.html">Kalastusmatkat</a></li>
-                <li><a href="kalusto.html">Kalusto</a></li>
-                <li><a href="galleria.html">Galleria</a></li>
-            </ul>
+            <a href="index.html">Etusivu</a>
+            <a href="opasesittely.html">Opasesittely</a>
+            <a href="kalastusmatkat.html" class="active">Kalastusmatkat</a>
+            <a href="kalusto.html">Kalusto</a>
+            <a href="galleria.html">Galleria</a>
         </nav>
     </header>
 
-    <main>
-        <section class="hero">
-            <h2>Kalastusmatkat</h2>
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Kalastusmatkat</h1>
+            <div class="underline"></div>
             <p>Unohtumattomia kalastuselämyksiä kaikille taitotasoille.</p>
-        </section>
+        </div>
+    </section>
 
-        <section class="tuote-alue">
-            <div class="tuote-kortti">
-                <img src="jättihauki.jpeg" alt="Suurhauen kalastus">
-                <h3>Suurhauen perässä</h3>
-                <p>Koko päivän kestävä heittokalastusretki saaristossa.</p>
-                <p><b>Hinta: 150 € / hlö</b></p>
-            </div>
+    <main>
+        <section class="about">
+            <div class="about-container">
 
-            <div class="tuote-kortti">
-                <img src="iltasyönti.jpeg" alt="Iltakalastus">
-                <h3>Iltasyönti järvellä</h3>
-                <p>Rentouttava 4 tunnin retki lähijärvelle.</p>
-                <p><b>Hinta: 80 € / hlö</b></p>
-            </div>
+                <div class="about-box tuote-kortti">
+                    <img src="jättihauki.jpeg" alt="Suurhauen kalastus">
+                    <h2>Suurhauen perässä</h2>
+                    <p>Koko päivän kestävä heittokalastusretki saaristossa.</p>
+                    <p><b>Hinta: 150 € / hlö</b></p>
+                </div>
 
-            <div class="tuote-kortti">
-                <img src="kuha.jpeg" alt="Kuhan jigaus">
-                <h3>Kuhan jigaus -kurssi</h3>
-                <p>Opi jigikalastuksen salat ammattilaisen opissa.</p>
-                <p><b>Hinta: 120 € / hlö</b></p>
-            </div>
+                <div class="about-box tuote-kortti">
+                    <img src="iltasyönti.jpeg" alt="Iltakalastus">
+                    <h2>Iltasyönti järvellä</h2>
+                    <p>Rentouttava 4 tunnin retki lähijärvelle.</p>
+                    <p><b>Hinta: 80 € / hlö</b></p>
+                </div>
 
-            <div class="tuote-kortti">
-                <img src="meritaimen.jpeg" alt="Meritaimenen kalastus">
-                <h3>Meritaimenretki</h3>
-                <p>Kauden mukaan sijoittuva haastava meriretki.</p>
-                <p><b>Hinta: 220 € / hlö</b></p>
-            </div>
+                <div class="about-box tuote-kortti">
+                    <img src="kuha.jpeg" alt="Kuhan jigaus">
+                    <h2>Kuhan jigaus -kurssi</h2>
+                    <p>Opi jigikalastuksen salat ammattilaisen opissa.</p>
+                    <p><b>Hinta: 120 € / hlö</b></p>
+                </div>
 
-            <div class="tuote-kortti">
-                <img src="pilkki.jpeg" alt="Talvikalastus">
-                <h3>Talvinen pilkkiretki</h3>
-                <p>Varusteet ja lämmin juoma kuuluvat hintaan.</p>
-                <p><b>Hinta: 60 € / hlö</b></p>
+                <div class="about-box tuote-kortti">
+                    <img src="meritaimen.jpeg" alt="Meritaimenen kalastus">
+                    <h2>Meritaimenretki</h2>
+                    <p>Kauden mukaan sijoittuva haastava meriretki.</p>
+                    <p><b>Hinta: 220 € / hlö</b></p>
+                </div>
+
+                <div class="about-box tuote-kortti">
+                    <img src="pilkki.jpeg" alt="Talvikalastus">
+                    <h2>Talvinen pilkkiretki</h2>
+                    <p>Varusteet ja lämmin juoma kuuluvat hintaan.</p>
+                    <p><b>Hinta: 60 € / hlö</b></p>
+                </div>
+
             </div>
         </section>
     </main>
@@ -70,5 +76,4 @@
     </footer>
 
 </body>
-
 </html>
