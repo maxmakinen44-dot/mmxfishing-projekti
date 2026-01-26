@@ -1,128 +1,152 @@
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    background-color: #f9f9f9;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
 }
 
-header {
-    background-color: #2c3e50;
-    color: white;
-    padding: 1.5rem 1rem;
-    text-align: center;
+:root {
+  --dark: #0e1116;
+  --dark-soft: #151a21;
+  --text: #eaeaea;
+  --accent: #f0b429;
 }
 
-nav ul {
-    list-style: none;
-    padding: 10px 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    background: #34495e;
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(14, 17, 22, 0.9);
+  z-index: 100;
 }
 
-nav li {
-    margin: 0 15px;
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--text);
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+.navbar nav a {
+  color: var(--text);
+  margin-left: 30px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  opacity: 0.8;
 }
 
-nav a:hover {
-    text-decoration: underline;
-    color: #3498db;
+.navbar nav a:hover,
+.navbar nav a.active {
+  opacity: 1;
+  color: var(--accent);
 }
 
 .hero {
-    text-align: center;
-    padding: 40px 20px;
-    background-color: white;
-    border-bottom: 1px solid #ddd;
+  height: 100vh;
+  background: url("hero-fishing.jpg") center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-.content {
-    display: flex;
-    max-width: 1000px;
-    margin: 20px auto;
-    padding: 20px;
-    gap: 20px;
-    background-color: white;
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
 }
 
-article {
-    flex: 3;
+.hero-content {
+  position: relative;
+  color: var(--text);
+  max-width: 800px;
+  padding: 0 20px;
 }
 
-aside {
-    flex: 1;
-    background: #f4f4f4;
-    padding: 20px;
-    border-radius: 5px;
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
 }
 
-.tuote-alue {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    max-width: 1200px;
-    margin: 30px auto;
-    padding: 0 20px;
+.hero p {
+  font-size: 1.1rem;
+  opacity: 0.9;
 }
 
-.tuote-kortti {
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    width: 280px;
-    padding: 15px;
-    text-align: center;
-    transition: 0.3s;
+.underline {
+  width: 120px;
+  height: 4px;
+  background: var(--accent);
+  margin: 0 auto 25px auto;
 }
 
-.tuote-kortti:hover {
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+.about {
+  background: var(--dark);
+  padding: 100px 20px;
 }
 
-.tuote-kortti img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 5px;
-    margin-bottom: 10px;
+.about-container {
+  max-width: 1100px;
+  margin: auto;
+  color: var(--text);
 }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #2c3e50;
-    color: white;
-    margin-top: 40px;
+.about-box {
+  background: var(--dark-soft);
+  padding: 40px;
+  border-radius: 8px;
+  margin-bottom: 30px;
 }
+
+.about-box h2 {
+  color: var(--accent);
+  margin-bottom: 15px;
+}
+
+.about-box p,
+.about-box li {
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+.about-box ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.about-box li {
+  margin-bottom: 8px;
+}
+
+
+.cta-button {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 15px 40px;
+  background: var(--accent);
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.cta-button:hover {
+  background: #ffc94a;
+}
+
 
 @media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
+  .hero h1 {
+    font-size: 2.4rem;
+  }
 
-    nav li {
-        margin: 5px 0;
-    }
-
-    .content {
-        flex-direction: column;
-    }
-
- .tuote-kortti {
-    width: 300px;     
-    border: 1px solid #ddd;
-    padding: 15px;
-    background: white;
-}
+  .navbar {
+    padding: 20px 30px;
+  }
 }
