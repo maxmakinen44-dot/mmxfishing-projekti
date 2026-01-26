@@ -1,4 +1,4 @@
-
+/* ---------- Perustyylit kaikille sivuille ---------- */
 * {
   margin: 0;
   padding: 0;
@@ -13,6 +13,7 @@
   --accent: #f0b429;
 }
 
+/* ---------- Navigaatio ---------- */
 .navbar {
   position: fixed;
   top: 0;
@@ -45,6 +46,7 @@
   color: var(--accent);
 }
 
+/* ---------- Hero-osio ---------- */
 .hero {
   height: 100vh;
   background: url("hero-fishing.jpg") center/cover no-repeat;
@@ -85,6 +87,7 @@
   margin: 0 auto 25px auto;
 }
 
+/* ---------- About / Opasesittely ---------- */
 .about {
   background: var(--dark);
   padding: 100px 20px;
@@ -123,7 +126,7 @@
   margin-bottom: 8px;
 }
 
-
+/* ---------- Call-to-Action ---------- */
 .cta-button {
   display: inline-block;
   margin-top: 40px;
@@ -140,7 +143,48 @@
   background: #ffc94a;
 }
 
+/* ---------- Kalastusmatkat-sivun tuotekortit ---------- */
+.tuote-alue {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
 
+.tuote-kortti {
+  background: var(--dark-soft);
+  color: var(--text);
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.tuote-kortti:hover {
+  transform: translateY(-5px);
+}
+
+.tuote-kortti img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.tuote-kortti h3 {
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.tuote-kortti p {
+  opacity: 0.9;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+/* ---------- Responsiivisuus ---------- */
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 2.4rem;
