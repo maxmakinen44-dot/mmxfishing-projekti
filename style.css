@@ -194,3 +194,11 @@
     padding: 20px 30px;
   }
 }
+
+/* ---------- Kalastusmatkat-kuvien pienennys (2/3) ---------- */
+.tuote-kortti img {
+  max-width: 66%; /* pienempi kuva */
+  height: auto;
+  display: block;
+  margin: 0 auto 15px auto; /* keskittää kuvan kortissa */
+}
