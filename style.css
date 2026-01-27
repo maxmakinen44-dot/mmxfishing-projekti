@@ -78,6 +78,7 @@ body {
   background-repeat: no-repeat;
 }
 
+/* Sivukohtaiset taustakuvat */
 .etusivu .hero { background-image: url("merellä.png"); }
 .opas .hero { background-image: url("oppaat.png"); }
 .matkat .hero { background-image: url("vene.png"); }
@@ -103,12 +104,6 @@ body {
   margin-bottom: 10px;
 }
 
-.hero p {
-  font-size: 1.2rem;
-  color: #fff;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9);
-}
-
 .underline {
   width: 80px;
   height: 4px;
@@ -118,12 +113,12 @@ body {
 
 /* ---------- Sisältöalueet ---------- */
 .about, .tuote-alue {
-  padding: 80px 20px;
+  padding: 100px 20px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.about-container {
+.about-container, .tuote-alue {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
@@ -134,7 +129,24 @@ body {
   padding: 30px;
   border-radius: 12px;
   border: 1px solid rgba(255,255,255,0.05);
-  transition: transform 0.3s;
+  transition: 0.3s;
+}
+
+.tuote-kortti {
+  padding: 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+.tuote-kortti img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-bottom: 3px solid var(--accent);
+}
+
+.tuote-kortti p {
+  padding: 15px;
 }
 
 .about-box h2 {
@@ -158,7 +170,6 @@ body {
 .cta-button:hover {
   background-color: #ffc94a;
   transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(240, 180, 41, 0.3);
 }
 
 /* ---------- Footer ---------- */
@@ -166,7 +177,6 @@ footer {
   text-align: center;
   padding: 60px 20px;
   background: #090b0e;
-  font-size: 0.9rem;
   border-top: 1px solid rgba(255,255,255,0.05);
 }
 
@@ -174,18 +184,5 @@ footer {
 @media (max-width: 768px) {
   .navbar {
     position: relative; 
-    flex-direction: column;
-    padding: 10px;
-  }
-  .navbar nav {
-    margin-top: 10px;
-    gap: 10px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .hero h1 {
-    font-size: 2.2rem;
-  }
-}
-
+    flex-
 
