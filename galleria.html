@@ -6,12 +6,8 @@
   <title>Galleria – mmxfishing</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Pakotetaan taustakuva näkymään tällä sivulla */
-    .hero {
-      background-image: url("vene.png");
-    }
-
-    /* Gallerian oma ruudukko */
+    /* Pidetään vain gallerian ruudukkoon liittyvät tyylit tässä, 
+       jotta ne eivät sotke muita sivuja */
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -44,6 +40,7 @@
 
   <header class="navbar">
     <a href="index.html" class="logo">mmxfishing</a>
+    
     <nav>
       <a href="index.html">ETUSIVU</a>
       <a href="opasesittely.html">OPASESITTELY</a>
