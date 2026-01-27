@@ -4,7 +4,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Segoe UI", Arial, sans-serif;
-  /* Tekee liukumisesta pehmeän ankkurilinkkejä käytettäessä */
   scroll-behavior: smooth;
 }
 
@@ -65,7 +64,7 @@ body {
   color: var(--accent);
 }
 
-/* ---------- Hero-osio (Yhteiset tyylit) ---------- */
+/* ---------- Hero-osio ---------- */
 .hero {
   height: 70vh;
   min-height: 450px;
@@ -79,7 +78,6 @@ body {
   background-repeat: no-repeat;
 }
 
-/* --- Sivukohtaiset taustakuvat --- */
 .etusivu .hero { background-image: url("merellä.png"); }
 .opas .hero { background-image: url("oppaat.png"); }
 .matkat .hero { background-image: url("vene.png"); }
@@ -88,6 +86,106 @@ body {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  /* radial-gradient tummentaa kuvaa kevyesti keskeltä, j
+  background: radial-gradient(circle, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+  max-width: 800px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  color: #fff;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #fff;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9);
+}
+
+.underline {
+  width: 80px;
+  height: 4px;
+  background: var(--accent);
+  margin: 15px auto 25px auto;
+}
+
+/* ---------- Sisältöalueet ---------- */
+.about, .tuote-alue {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.about-box, .tuote-kortti {
+  background: var(--dark-soft);
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: transform 0.3s;
+}
+
+.about-box h2 {
+  color: var(--accent);
+  margin-bottom: 15px;
+}
+
+/* ---------- Nappula ---------- */
+.cta-button {
+  display: inline-block;
+  padding: 15px 35px;
+  background-color: var(--accent);
+  color: #000 !important;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: 0.3s;
+  text-transform: uppercase;
+}
+
+.cta-button:hover {
+  background-color: #ffc94a;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(240, 180, 41, 0.3);
+}
+
+/* ---------- Footer ---------- */
+footer {
+  text-align: center;
+  padding: 60px 20px;
+  background: #090b0e;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+/* ---------- Responsiivisuus ---------- */
+@media (max-width: 768px) {
+  .navbar {
+    position: relative; 
+    flex-direction: column;
+    padding: 10px;
+  }
+  .navbar nav {
+    margin-top: 10px;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+}
 
 
