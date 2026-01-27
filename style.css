@@ -55,8 +55,7 @@
 /* ---------- Hero-osio ---------- */
 .hero {
   height: 100vh;
-  /* Varmista että kuvan nimi on täsmälleen tämä projektikansiossasi */
-  background: url("taustakuva.jpg") center/cover no-repeat;
+  background: url("vene.png") center/cover no-repeat;
   position: relative;
   display: flex;
   align-items: center;
@@ -64,14 +63,12 @@
   text-align: center;
 }
 
-/* Poistettu tumma kerros (overlay) */
 .hero-overlay {
   position: absolute;
   inset: 0;
   background: transparent;
 }
 
-/* Poistettu musta laatikko, sumennus ja taustaväri */
 .hero-content {
   position: relative;
   color: var(--text);
@@ -79,7 +76,6 @@
   padding: 20px;
 }
 
-/* Lisätty tekstivarjo parantamaan luettavuutta ilman laatikkoa */
 .hero h1 {
   font-size: 3.5rem;
   margin-bottom: 20px;
@@ -186,5 +182,6 @@ footer {
     font-size: 0.8rem;
   }
 }
+
 
 
