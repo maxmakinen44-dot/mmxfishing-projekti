@@ -38,6 +38,11 @@ body {
   font-weight: bold;
   color: var(--text);
   text-decoration: none;
+  transition: 0.3s;
+}
+
+.logo:hover {
+  color: var(--accent);
 }
 
 .navbar nav {
@@ -51,22 +56,44 @@ body {
   font-size: 0.85rem;
   font-weight: bold;
   text-transform: uppercase;
+  transition: 0.3s;
 }
 
-.navbar nav a.active {
+.navbar nav a:hover, .navbar nav a.active {
   color: var(--accent);
 }
 
-/* ---------- Hero-osio (Etusivu & Matkat) ---------- */
+/* ---------- Hero-osio (Yhteiset tyylit) ---------- */
 .hero {
   height: 70vh;
   min-height: 450px;
-  background: url("vene.png") center/cover no-repeat;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* --- Sivukohtaiset taustakuvat --- */
+/* Nämä toimivat, kun lisäät HTML:ään <body class="nimi"> */
+
+.etusivu .hero {
+  background-image: url("vene.png");
+}
+
+.opas .hero {
+  background-image: url("vene.png"); /* Vaihda tähän opassivun kuva */
+}
+
+.matkat .hero {
+  background-image: url("jättihauki.jpeg");
+}
+
+.galleria-sivu .hero {
+  background-image: url("iltasyönti.jpeg");
 }
 
 .hero-overlay {
@@ -88,11 +115,6 @@ body {
   margin-bottom: 10px;
 }
 
-.hero p {
-  font-size: 1.2rem;
-  text-shadow: 1px 1px 10px rgba(0,0,0,1);
-}
-
 .underline {
   width: 80px;
   height: 4px;
@@ -100,60 +122,30 @@ body {
   margin: 15px auto 25px auto;
 }
 
-/* ---------- Etusivun "Meistä" laatikot (about-container) ---------- */
-.about {
+/* ---------- Sisältöalueet (Etusivu & Galleria) ---------- */
+.about, .tuote-alue {
   padding: 80px 20px;
-  background-color: var(--dark);
-}
-
-.about-container {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.about-container, .tuote-alue {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
 }
 
-.about-box {
+.about-box, .tuote-kortti {
   background: var(--dark-soft);
   padding: 30px;
   border-radius: 12px;
   border: 1px solid rgba(255,255,255,0.05);
-  text-align: left;
-}
-
-.about-box h2 {
-  color: var(--accent);
-  margin-bottom: 15px;
-}
-
-.about-box ul {
-  list-style: none;
-  margin-top: 10px;
-}
-
-.about-box li {
-  margin-bottom: 8px;
-}
-
-/* ---------- Kalastusmatkat: Tuotekortit ---------- */
-.tuote-alue {
-  padding: 80px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
+  transition: transform 0.3s;
 }
 
 .tuote-kortti {
-  background: var(--dark-soft);
-  border-radius: 12px;
+  padding: 0;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  border: 1px solid rgba(255,255,255,0.05);
-  transition: transform 0.3s;
   text-align: center;
 }
 
@@ -168,30 +160,14 @@ body {
   border-bottom: 3px solid var(--accent);
 }
 
-.tuote-kortti h3 {
-  color: var(--accent);
-  padding: 20px 20px 10px;
-}
-
 .tuote-kortti p {
-  padding: 0 20px 20px;
+  padding: 15px;
   color: #ccc;
 }
 
-/* ---------- Yleiset painikkeet ---------- */
-.cta-button {
-  display: inline-block;
-  padding: 15px 40px;
-  background: var(--accent);
-  color: #000;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 6px;
-  transition: 0.3s;
-}
-
-.cta-button:hover {
-  background: #ffc94a;
+.about-box h2 {
+  color: var(--accent);
+  margin-bottom: 15px;
 }
 
 /* ---------- Footer ---------- */
