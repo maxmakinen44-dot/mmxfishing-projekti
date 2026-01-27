@@ -5,74 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tietoa meistä – mmxfishing</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    /* ---------- About-osio pystysuoraan ---------- */
-    .about-container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 40px 20px;
-      display: block; /* ei grid/flex */
-    }
-
-    .about-box {
-      background-color: #151a21; /* tummanharmaa kuten muilla sivuilla */
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      text-align: left;
-    }
-
-    .about-box h2 {
-      color: #f0b429; /* accent väri */
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-
-    .about-box p,
-    .about-box li {
-      color: #eaeaea; /* teksti valkoiseksi */
-      line-height: 1.5;
-      margin: 0;
-    }
-
-    .about-box ul {
-      list-style: none;
-      padding-left: 0;
-      margin-top: 10px;
-    }
-
-    .about-container .cta-button {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 15px 40px;
-      background: #f0b429;
-      color: #000;
-      font-weight: bold;
-      border-radius: 6px;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-
-    .about-container .cta-button:hover {
-      background: #ffc94a;
-    }
-  </style>
 </head>
 <body>
 
-
-    <header>
-        <h1>mmxfishing</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Etusivu</a></li>
-                <li><a href="opasesittely.html">Opasesittely</a></li>
-                <li><a href="kalastusmatkat.html">Kalastusmatkat</a></li>
-                <li><a href="kalusto.html">Kalusto</a></li>
-                <li><a href="galleria.html">Galleria</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header class="navbar">
+    <a href="index.html" class="logo">mmxfishing</a>
+    
+    <nav>
+      <a href="opasesittely.html">OPASESITTELY</a>
+      <a href="about.html">KALASTUSMATKAT</a>
+      <a href="#">YHTEYSTIEDOT</a>
+      <a href="index.html" class="active">MEISTÄ</a>
+    </nav>
+  </header>
 
   <section class="hero">
     <div class="hero-overlay"></div>
@@ -117,10 +62,17 @@
         </ul>
       </div>
 
-      <a href="#" class="cta-button">Ota yhteyttä</a>
+      <div style="text-align: center;">
+        <a href="#" class="cta-button">Ota yhteyttä</a>
+      </div>
 
     </div>
   </section>
 
+  <footer>
+    <p>&copy; 2024 mmxfishing - Kaikki oikeudet pidätetään.</p>
+  </footer>
+
 </body>
 </html>
+
