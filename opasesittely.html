@@ -5,6 +5,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>mmxfishing – Opasesittely</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ---------- About-osio pystysuoraan vasemmalle ---------- */
+    .about-container {
+      max-width: 800px; /* ei liian leveä */
+      margin: 0 auto;
+      padding: 40px 20px;
+      display: block; /* ei grid, ei flex */
+    }
+
+    .about-box {
+      background-color: #151a21; /* sama kuin muilla sivuilla */
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      text-align: left; /* vasen tasaus */
+    }
+
+    .about-box h2 {
+      color: #f0b429; /* accent */
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .about-box p {
+      color: #eaeaea; /* teksti valkoiseksi */
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* Painike alle kaikille laatikoille */
+    .about-container .cta-button {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 15px 40px;
+      background: #f0b429;
+      color: #000;
+      font-weight: bold;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .about-container .cta-button:hover {
+      background: #ffc94a;
+    }
+  </style>
 </head>
 <body>
 
@@ -31,16 +77,18 @@
 <section class="about">
   <div class="about-container">
     <div class="about-box">
-      <h2>Opastajien rooli</h2>
-      <p>Opastajien tehtävänä on varmistaa turvallinen ja mukava kalastuselämys kaikille osallistujille. He opastavat, neuvovat ja näyttävät parhaat kalastuspaikat.</p>
+      <h2>Keitä me olemme</h2>
+      <p>Olemme ammattitaitoinen kalastusopasryhmä, joka tarjoaa unohtumattomia elämyksiä kaikille taitotasoille.</p>
     </div>
+
     <div class="about-box">
-      <h2>Varusteet</h2>
-      <p>Opastajat ja asiakkaat saavat käyttöönsä tarvittavat kalastusvälineet. On tärkeää tuntea välineet ja osata käyttää niitä turvallisesti.</p>
+      <h2>Mitä tarjoamme</h2>
+      <p>Tarjoamme erilaisia kalastusretkiä, kursseja ja ohjausta niin aloittelijoille kuin kokeneille kalastajille.</p>
     </div>
+
     <div class="about-box">
-      <h2>Turvallisuus ja säännöt</h2>
-      <p>Koko retken ajan noudatetaan turvallisuusohjeita. Vesillä liikutaan vastuullisesti ja luonnon kunnioitus on tärkeintä.</p>
+      <h2>Meidän arvomme</h2>
+      <p>Panostamme vastuullisuuteen, turvallisuuteen ja luonnon kunnioittamiseen kaikilla retkillämme.</p>
     </div>
 
     <a href="yhteystiedot.html" class="cta-button">Ota yhteyttä</a>
