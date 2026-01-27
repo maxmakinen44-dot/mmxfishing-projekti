@@ -78,23 +78,10 @@ body {
 }
 
 /* --- Sivukohtaiset taustakuvat --- */
-/* Nämä toimivat, kun lisäät HTML:ään <body class="nimi"> */
-
-.etusivu .hero {
-  background-image: url("merellä.png");
-}
-
-.opas .hero {
-  background-image: url("oppaat.png"); /* Vaihda tähän opassivun kuva */
-}
-
-.matkat .hero {
-  background-image: url("vene.png");
-}
-
-.galleria-sivu .hero {
-  background-image: url("järvi.png");
-}
+.etusivu .hero { background-image: url("merellä.png"); }
+.opas .hero { background-image: url("oppaat.png"); }
+.matkat .hero { background-image: url("vene.png"); }
+.galleria-sivu .hero { background-image: url("järvi.png"); }
 
 .hero-overlay {
   position: absolute;
@@ -122,7 +109,7 @@ body {
   margin: 15px auto 25px auto;
 }
 
-/* ---------- Sisältöalueet (Etusivu & Galleria) ---------- */
+/* ---------- Sisältöalueet ---------- */
 .about, .tuote-alue {
   padding: 80px 20px;
   max-width: 1200px;
@@ -143,6 +130,31 @@ body {
   transition: transform 0.3s;
 }
 
+.about-box h2 {
+  color: var(--accent);
+  margin-bottom: 15px;
+}
+
+/* ---------- UUSI: Ota yhteyttä -nappulan tyyli ---------- */
+.cta-button {
+  display: inline-block;
+  padding: 15px 35px;
+  background-color: var(--accent);
+  color: #000 !important; /* Musta teksti keltaisella pohjalla */
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: 0.3s;
+  text-transform: uppercase;
+}
+
+.cta-button:hover {
+  background-color: #ffc94a;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(240, 180, 41, 0.3);
+}
+
+/* ---------- Tuotekortit & Galleria ---------- */
 .tuote-kortti {
   padding: 0;
   overflow: hidden;
@@ -163,11 +175,6 @@ body {
 .tuote-kortti p {
   padding: 15px;
   color: #ccc;
-}
-
-.about-box h2 {
-  color: var(--accent);
-  margin-bottom: 15px;
 }
 
 /* ---------- Footer ---------- */
