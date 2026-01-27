@@ -1,40 +1,46 @@
 <!DOCTYPE html>
 <html lang="fi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>mmxfishing – Opasesittely</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Opasesittely – mmxfishing</title>
+  <link rel="stylesheet" href="style.css">
   <style>
-    /* ---------- About-osio pystysuoraan vasemmalle ---------- */
+    /* ---------- About-osio pystysuoraan ---------- */
     .about-container {
-      max-width: 800px; /* ei liian leveä */
+      max-width: 800px;
       margin: 0 auto;
       padding: 40px 20px;
-      display: block; /* ei grid, ei flex */
+      display: block; /* pystysuora lista */
     }
 
     .about-box {
-      background-color: #151a21; /* sama kuin muilla sivuilla */
+      background-color: #151a21; /* tummanharmaa */
       padding: 20px;
       margin-bottom: 20px;
       border-radius: 8px;
-      text-align: left; /* vasen tasaus */
+      text-align: left;
     }
 
     .about-box h2 {
-      color: #f0b429; /* accent */
+      color: #f0b429; /* accent väri */
       font-weight: bold;
       margin-bottom: 10px;
     }
 
-    .about-box p {
-      color: #eaeaea; /* teksti valkoiseksi */
+    .about-box p,
+    .about-box li {
+      color: #eaeaea; /* valkoinen teksti */
       line-height: 1.5;
       margin: 0;
     }
 
-    /* Painike alle kaikille laatikoille */
+    .about-box ul {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 10px;
+    }
+
     .about-container .cta-button {
       display: inline-block;
       margin-top: 10px;
@@ -54,50 +60,63 @@
 </head>
 <body>
 
-<header class="navbar">
-  <div class="logo">mmxfishing</div>
-  <nav>
-    <a href="index.html">ETUSIVU</a>
-    <a href="opasesittely.html" class="active">OPASESITTELY</a>
-    <a href="kalastusmatkat.html">KALASTUSMATKAT</a>
-    <a href="kalusto.html">KALUSTO</a>
-    <a href="galleria.html">GALLERIA</a>
-  </nav>
-</header>
+  <header class="navbar">
+    <div class="logo">mmxfishing</div>
+    <nav>
+      <a href="index.html">ETUSIVU</a>
+      <a href="opasesittely.html" class="active">OPASESITTELY</a>
+      <a href="kalastusmatkat.html">KALASTUSMATKAT</a>
+      <a href="kalusto.html">KALUSTO</a>
+      <a href="galleria.html">GALLERIA</a>
+    </nav>
+  </header>
 
-<section class="hero">
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <h1>Opasesittely</h1>
-    <div class="underline"></div>
-    <p>Tervetuloa mmxfishingin opasesittelyyn – kaikki mitä sinun tarvitsee tietää!</p>
-  </div>
-</section>
-
-<section class="about">
-  <div class="about-container">
-    <div class="about-box">
-      <h2>Keitä me olemme</h2>
-      <p>Olemme ammattitaitoinen kalastusopasryhmä, joka tarjoaa unohtumattomia elämyksiä kaikille taitotasoille.</p>
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Opasesittely</h1>
+      <div class="underline"></div>
+      <p>Tervetuloa mmxfishingin opasesittelyyn – kaikki mitä sinun tarvitsee tietää!</p>
     </div>
+  </section>
 
-    <div class="about-box">
-      <h2>Mitä tarjoamme</h2>
-      <p>Tarjoamme erilaisia kalastusretkiä, kursseja ja ohjausta niin aloittelijoille kuin kokeneille kalastajille.</p>
+  <section class="about">
+    <div class="about-container">
+
+      <div class="about-box">
+        <h2>Oppaat ja turvallisuus</h2>
+        <p>
+          Oppaamme ovat kokeneita kalastajia ja vesillä liikkujia, jotka tuntevat alueen ja sen eläimistön. 
+          He opastavat asiakkaita turvallisesti ja tarjoavat vinkkejä kalastustekniikoihin, 
+          jotta retki on sekä opettavainen että elämyksellinen.
+        </p>
+      </div>
+
+      <div class="about-box">
+        <h2>Varusteet ja kalastus</h2>
+        <p>
+          Kaikki tarvittavat kalastusvälineet sisältyvät retkiin, joten sinun ei tarvitse huolehtia varusteista. 
+          Opastamme eri kalastusmuotoihin ja lajien tunnistamiseen, jotta jokainen pääsee kokeilemaan onnistuneesti ja turvallisesti.
+        </p>
+      </div>
+
+      <div class="about-box">
+        <h2>Vastuullisuus ja arvot</h2>
+        <p>
+          Retket toteutetaan aina vastuullisesti ja luonnon kunnioittaen. 
+          Huolehdimme lajien suojelusta, kestävästä kalastuksesta ja jätteiden asianmukaisesta käsittelystä, 
+          jotta vesistö säilyy puhtaana tuleville sukupolville.
+        </p>
+      </div>
+
+      <a href="yhteystiedot.html" class="cta-button">Ota yhteyttä</a>
+
     </div>
+  </section>
 
-    <div class="about-box">
-      <h2>Meidän arvomme</h2>
-      <p>Panostamme vastuullisuuteen, turvallisuuteen ja luonnon kunnioittamiseen kaikilla retkillämme.</p>
-    </div>
-
-    <a href="yhteystiedot.html" class="cta-button">Ota yhteyttä</a>
-  </div>
-</section>
-
-<footer class="site-footer">
-  © 2026 mmxfishing – Vastuullista kalastusta
-</footer>
+  <footer class="site-footer">
+    © 2026 mmxfishing – Vastuullista kalastusta
+  </footer>
 
 </body>
 </html>
