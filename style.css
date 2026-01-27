@@ -16,6 +16,8 @@
 /* Estää navbarin peittämästä sisältöä */
 body {
   padding-top: 80px;
+  background: var(--dark);
+  color: var(--text);
 }
 
 /* ---------- Navigaatio ---------- */
@@ -27,7 +29,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(14, 17, 22, 0.9);
+  background: rgba(14, 17, 22, 0.95);
   z-index: 100;
 }
 
@@ -35,6 +37,7 @@ body {
   font-size: 1.4rem;
   font-weight: bold;
   color: var(--text);
+  font-family: "Segoe UI", Arial, sans-serif;
 }
 
 .navbar nav a {
@@ -43,6 +46,7 @@ body {
   text-decoration: none;
   font-size: 0.95rem;
   opacity: 0.8;
+  font-family: "Segoe UI", Arial, sans-serif;
 }
 
 .navbar nav a:hover,
@@ -73,6 +77,7 @@ body {
   color: var(--text);
   max-width: 800px;
   padding: 0 20px;
+  font-family: "Segoe UI", Arial, sans-serif;
 }
 
 .hero h1 {
@@ -120,6 +125,7 @@ body {
 .about-box li {
   line-height: 1.7;
   opacity: 0.9;
+  font-family: "Segoe UI", Arial, sans-serif;
 }
 
 .about-box ul {
@@ -142,6 +148,7 @@ body {
   font-weight: bold;
   border-radius: 6px;
   transition: 0.3s;
+  font-family: "Segoe UI", Arial, sans-serif;
 }
 
 .cta-button:hover {
@@ -165,6 +172,7 @@ body {
   border-radius: 8px;
   text-align: center;
   transition: transform 0.3s;
+  font-family: "Segoe UI", Arial, sans-serif;
 }
 
 .tuote-kortti:hover {
@@ -177,7 +185,6 @@ body {
   display: block;
   margin: 0 auto 15px auto; /* keskittää kuvan kortissa */
   border-radius: 6px;
-  margin-bottom: 15px;
 }
 
 .tuote-kortti h3 {
@@ -210,4 +217,5 @@ body {
   padding: 25px;
   font-size: 0.85rem;
   opacity: 0.7;
+  font-family: "Segoe UI", Arial, sans-serif;
 }
