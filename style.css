@@ -18,6 +18,7 @@ body {
   background-color: var(--dark);
   color: var(--text);
   line-height: 1.6;
+  overflow-x: hidden; /* Estää sivusuuntaisen scrollauksen mobiilissa */
 }
 
 /* ---------- Navigaatio ---------- */
@@ -39,11 +40,6 @@ body {
   font-weight: bold;
   color: var(--text);
   text-decoration: none;
-  transition: 0.3s;
-}
-
-.logo:hover {
-  color: var(--accent);
 }
 
 .navbar nav {
@@ -57,7 +53,6 @@ body {
   font-size: 0.85rem;
   font-weight: bold;
   text-transform: uppercase;
-  transition: 0.3s;
 }
 
 .navbar nav a:hover, .navbar nav a.active {
@@ -68,6 +63,7 @@ body {
 .hero {
   height: 70vh;
   min-height: 450px;
+  margin-top: 0;
   position: relative;
   display: flex;
   align-items: center;
@@ -87,13 +83,14 @@ body {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%);
+  background: radial-gradient(circle, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.2) 100%);
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
   padding: 20px;
+  width: 100%;
   max-width: 800px;
 }
 
@@ -101,7 +98,6 @@ body {
   font-size: 3.5rem;
   color: #fff;
   text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
-  margin-bottom: 10px;
 }
 
 .underline {
@@ -111,9 +107,9 @@ body {
   margin: 15px auto 25px auto;
 }
 
-/* ---------- Sisältöalueet ---------- */
+/* ---------- Tuote-alue ja Kortit (TÄRKEÄ KORJAUS) ---------- */
 .about, .tuote-alue {
-  padding: 100px 20px;
+  padding: 80px 20px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -126,33 +122,29 @@ body {
 
 .about-box, .tuote-kortti {
   background: var(--dark-soft);
-  padding: 30px;
   border-radius: 12px;
   border: 1px solid rgba(255,255,255,0.05);
-  transition: 0.3s;
+  overflow: hidden; /* Pakottaa sisällön pysymään kortin sisällä */
 }
 
+.about-box { padding: 30px; }
+
 .tuote-kortti {
-  padding: 0;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
   text-align: center;
 }
 
+/* TÄMÄ ESTÄÄ VALTAVAT KUVAT */
 .tuote-kortti img {
   width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
+  height: 250px; /* Kiinteä korkeus pitää rivit siisteinä */
+  object-fit: cover; /* Rajaa kuvan nätisti ilman venymistä */
   border-bottom: 3px solid var(--accent);
 }
 
-.tuote-kortti p {
-  padding: 15px;
-}
-
-.about-box h2 {
-  color: var(--accent);
-  margin-bottom: 15px;
-}
+.tuote-kortti h3 { padding-top: 15px; color: var(--accent); }
+.tuote-kortti p { padding: 15px; color: #ccc; }
 
 /* ---------- Nappula ---------- */
 .cta-button {
@@ -163,13 +155,8 @@ body {
   text-decoration: none;
   font-weight: bold;
   border-radius: 6px;
-  transition: 0.3s;
   text-transform: uppercase;
-}
-
-.cta-button:hover {
-  background-color: #ffc94a;
-  transform: translateY(-3px);
+  margin-top: 20px;
 }
 
 /* ---------- Footer ---------- */
@@ -184,5 +171,18 @@ footer {
 @media (max-width: 768px) {
   .navbar {
     position: relative; 
-    flex-
+    flex-direction: column;
+    padding: 15px 20px;
+  }
+  .navbar nav {
+    margin-top: 15px;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .hero { height: 50vh; }
+  .hero h1 { font-size: 2.2rem; }
+  .tuote-kortti img { height: 200px; } /* Hieman matalammat kuvat kännykällä */
+}
+
 
