@@ -113,23 +113,19 @@
   border-radius: 8px;
   text-align: center;
   transition: transform 0.3s;
-  color: #ffffff; /* Tekstit valkoiseksi */
 }
 
-/* Otsikot säilyvät korostevärissä */
 .about-box h2,
 .tuote-kortti h3 {
   color: var(--accent);
   margin-bottom: 10px;
 }
 
-/* Tekstit näkyviksi */
 .about-box p,
 .about-box li,
 .tuote-kortti p {
   line-height: 1.5;
-  color: #ffffff; /* valkoinen */
-  opacity: 1;     /* täysi näkyvyys */
+  opacity: 0.9;
 }
 
 .about-box ul {
@@ -142,7 +138,7 @@
 }
 
 .tuote-kortti img {
-  max-width: 66%; /* pienempi kuva */
+  max-width: 66%;
   height: auto;
   display: block;
   margin: 0 auto 15px auto;
@@ -177,6 +173,13 @@ footer {
   text-align: center;
   padding: 20px;
   font-size: 0.9rem;
+}
+
+/* ---------- Kalastusmatkat-sivu: kaikki tekstit valkoisiksi ---------- */
+body.kalastusmatkat,
+body.kalastusmatkat * {
+  color: #ffffff !important;
+  opacity: 1 !important;
 }
 
 /* ---------- Responsiivisuus ---------- */
