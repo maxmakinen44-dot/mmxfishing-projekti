@@ -59,7 +59,7 @@
 .hero {
   height: 100vh;
   /* Varmista, että tallensit kuvan tällä nimellä samaan kansioon */
-  background: url("taustakuva.jpg") center/cover no-repeat;
+  background: url("vene.png") center/cover no-repeat;
   position: relative;
   display: flex;
   align-items: center;
@@ -201,3 +201,4 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
