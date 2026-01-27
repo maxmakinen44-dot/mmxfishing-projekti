@@ -27,10 +27,17 @@
   font-family: "Segoe UI", Arial, sans-serif;
 }
 
+/* Logo on nyt linkki, poistetaan oletusvärit ja alleviivaus */
 .logo {
   font-size: 1.4rem;
   font-weight: bold;
   color: var(--text);
+  text-decoration: none; 
+  transition: 0.3s;
+}
+
+.logo:hover {
+  color: var(--accent);
 }
 
 .navbar nav a {
@@ -51,7 +58,8 @@
 /* ---------- Hero-osio ---------- */
 .hero {
   height: 100vh;
-  background: url("hero-fishing.jpg") center/cover no-repeat;
+  /* Varmista, että tallensit kuvan tällä nimellä samaan kansioon */
+  background: url("taustakuva.jpg") center/cover no-repeat;
   position: relative;
   display: flex;
   align-items: center;
@@ -62,14 +70,17 @@
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(0, 0, 0, 0.4); /* Pehmentää kuvaa, jotta teksti nousee esiin */
 }
 
 .hero-content {
   position: relative;
   color: var(--text);
   max-width: 800px;
-  padding: 0 20px;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.6); /* Tumma läpinäkyvä tausta tekstin taakse */
+  border-radius: 12px;           /* Pyöristetyt kulmat */
+  backdrop-filter: blur(5px);    /* Kevyt sumennus taustalla (moderni efekti) */
 }
 
 .hero h1 {
