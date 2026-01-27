@@ -13,6 +13,11 @@
   --accent: #f0b429;
 }
 
+/* Estää navbarin peittämästä sisältöä */
+body {
+  padding-top: 80px;
+}
+
 /* ---------- Navigaatio ---------- */
 .navbar {
   position: fixed;
@@ -167,8 +172,10 @@
 }
 
 .tuote-kortti img {
-  max-width: 100%;
+  max-width: 66%; /* pienempi kuva */
   height: auto;
+  display: block;
+  margin: 0 auto 15px auto; /* keskittää kuvan kortissa */
   border-radius: 6px;
   margin-bottom: 15px;
 }
@@ -195,10 +202,12 @@
   }
 }
 
-/* ---------- Kalastusmatkat-kuvien pienennys (2/3) ---------- */
-.tuote-kortti img {
-  max-width: 66%; /* pienempi kuva */
-  height: auto;
-  display: block;
-  margin: 0 auto 15px auto; /* keskittää kuvan kortissa */
+/* ---------- Footer ---------- */
+.site-footer {
+  background: var(--dark-soft);
+  color: var(--text);
+  text-align: center;
+  padding: 25px;
+  font-size: 0.85rem;
+  opacity: 0.7;
 }
