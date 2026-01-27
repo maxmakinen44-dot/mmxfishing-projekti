@@ -113,19 +113,23 @@
   border-radius: 8px;
   text-align: center;
   transition: transform 0.3s;
+  color: #ffffff; /* Tekstit valkoiseksi */
 }
 
+/* Otsikot säilyvät korostevärissä */
 .about-box h2,
 .tuote-kortti h3 {
   color: var(--accent);
   margin-bottom: 10px;
 }
 
+/* Tekstit näkyviksi */
 .about-box p,
 .about-box li,
 .tuote-kortti p {
   line-height: 1.5;
-  opacity: 0.9;
+  color: #ffffff; /* valkoinen */
+  opacity: 1;     /* täysi näkyvyys */
 }
 
 .about-box ul {
