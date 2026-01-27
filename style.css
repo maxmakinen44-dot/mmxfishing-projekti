@@ -128,25 +128,27 @@
   opacity: 0.9;
 }
 
-.about-box ul {
-  list-style: none;
-  margin-top: 10px;
+/* ---------- Tämä osa ratkaisee tummat tekstit kalastusmatkat-sivulla ---------- */
+body[href$="kalastusmatkat.html"] p,
+body[href$="kalastusmatkat.html"] li,
+body[href$="kalastusmatkat.html"] span,
+body[href$="kalastusmatkat.html"] h1,
+body[href$="kalastusmatkat.html"] h2,
+body[href$="kalastusmatkat.html"] h3,
+body[href$="kalastusmatkat.html"] h4,
+body[href$="kalastusmatkat.html"] h5,
+body[href$="kalastusmatkat.html"] h6 {
+  color: #ffffff !important;
+  opacity: 1 !important;
 }
 
-.about-box li {
-  margin-bottom: 8px;
-}
-
-.tuote-kortti img {
-  max-width: 66%;
-  height: auto;
-  display: block;
-  margin: 0 auto 15px auto;
-  border-radius: 6px;
-}
-
-.tuote-kortti:hover {
-  transform: translateY(-5px);
+/* ---------- Footer ---------- */
+footer {
+  background: var(--dark);
+  color: var(--text);
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
 }
 
 /* ---------- Call-to-Action ---------- */
@@ -164,22 +166,6 @@
 
 .cta-button:hover {
   background: #ffc94a;
-}
-
-/* ---------- Footer ---------- */
-footer {
-  background: var(--dark);
-  color: var(--text);
-  text-align: center;
-  padding: 20px;
-  font-size: 0.9rem;
-}
-
-/* ---------- Kalastusmatkat-sivu: kaikki tekstit valkoisiksi ---------- */
-body.kalastusmatkat,
-body.kalastusmatkat * {
-  color: #ffffff !important;
-  opacity: 1 !important;
 }
 
 /* ---------- Responsiivisuus ---------- */
