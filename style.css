@@ -13,14 +13,19 @@
   --accent: #f0b429;
 }
 
-/* ---------- Navigaatio (Korjattu pysymään yhdellä rivillä) ---------- */
+body {
+  background-color: var(--dark);
+  color: var(--text);
+}
+
+/* ---------- Navigaatio ---------- */
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
   padding: 15px 40px;
   display: flex;
-  justify-content: space-between; /* Logo vasemmalle, navigaatio oikealle */
+  justify-content: space-between;
   align-items: center;
   background: rgba(14, 17, 22, 0.95);
   z-index: 1000;
@@ -32,7 +37,6 @@
   color: var(--text);
   text-decoration: none;
   transition: 0.3s;
-  flex-shrink: 0; /* Estää logon pienenemisen */
 }
 
 .logo:hover {
@@ -40,8 +44,8 @@
 }
 
 .navbar nav {
-  display: flex; /* Pitää linkit vierekkäin */
-  gap: 20px;     /* Tila linkkien välissä */
+  display: flex;
+  gap: 20px;
 }
 
 .navbar nav a {
@@ -49,10 +53,9 @@
   text-decoration: none;
   font-size: 0.85rem;
   font-weight: bold;
-  letter-spacing: 0.5px;
   opacity: 0.8;
   transition: 0.3s;
-  white-space: nowrap; /* Estää tekstin rivittymisen */
+  white-space: nowrap;
 }
 
 .navbar nav a:hover,
@@ -61,9 +64,9 @@
   color: var(--accent);
 }
 
-/* ---------- Hero-osio (Teksti ilman laatikkoa) ---------- */
+/* ---------- Hero-osio (Tekstivarjolla) ---------- */
 .hero {
-  height: 100vh;
+  height: 80vh; /* Hieman matalampi kuin etusivulla, jotta sisältö näkyy heti */
   background: url("vene.png") center/cover no-repeat;
   position: relative;
   display: flex;
@@ -72,143 +75,117 @@
   text-align: center;
 }
 
-/* Erittäin kevyt tummennus koko kuvan päälle parantamaan valkoisen tekstin erottuvuutta */
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.25); 
+  background: rgba(0, 0, 0, 0.3); 
 }
 
 .hero-content {
   position: relative;
-  color: #ffffff;
+  z-index: 2;
   max-width: 900px;
   padding: 0 20px;
-  z-index: 2;
 }
 
-/* Voimakas tekstivarjo takaa näkyvyyden ilman laatikkoa */
 .hero h1 {
-  font-size: 4rem;
-  margin-bottom: 15px;
+  font-size: 3.5rem;
+  color: #ffffff;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.9), 0px 0px 5px rgba(0,0,0,0.5);
+  text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.9);
+  margin-bottom: 10px;
 }
 
 .hero p {
-  font-size: 1.3rem;
-  font-weight: 400;
+  font-size: 1.2rem;
+  color: #ffffff;
   text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.9);
-  max-width: 700px;
-  margin: 0 auto;
 }
 
 .underline {
-  width: 100px;
+  width: 80px;
   height: 4px;
   background: var(--accent);
-  margin: 0 auto 25px auto;
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+  margin: 15px auto 25px auto;
 }
 
-/* ---------- About / Sisältöalueet ---------- */
-.about {
-  background: var(--dark);
+/* ---------- Kalastusmatkat: Tuotekortit ---------- */
+.tuote-alue {
   padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
 }
 
+.tuote-kortti {
+  background: var(--dark-soft);
+  padding: 0 0 20px 0; /* Alareunaan tilaa */
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.tuote-kortti:hover {
+  transform: translateY(-10px);
+}
+
+.tuote-kortti img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* Pitää kuvat samanmuotoisina */
+  margin-bottom: 15px;
+}
+
+.tuote-kortti h3 {
+  color: var(--accent);
+  margin: 10px 0;
+  padding: 0 15px;
+}
+
+.tuote-kortti p {
+  padding: 0 15px;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* ---------- About-laatikot (Etusivua varten) ---------- */
 .about-container {
   max-width: 1100px;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 25px;
-  color: var(--text);
+  padding: 80px 20px;
 }
 
 .about-box {
   background: var(--dark-soft);
-  padding: 35px;
+  padding: 30px;
   border-radius: 10px;
-  transition: transform 0.3s ease;
 }
 
-.about-box:hover {
-  transform: translateY(-5px);
-}
-
-.about-box h2 {
-  color: var(--accent);
-  margin-bottom: 15px;
-  font-size: 1.5rem;
-}
-
-.about-box p, .about-box li {
-  line-height: 1.7;
-  font-size: 1rem;
-}
-
-.about-box ul {
-  list-style: none;
-}
-
-.about-box li {
-  margin-bottom: 12px;
-}
-
-/* ---------- Painikkeet ---------- */
-.cta-button {
-  display: inline-block;
-  margin-top: 30px;
-  padding: 16px 45px;
-  background: var(--accent);
-  color: #000;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-  transition: 0.3s;
-  text-transform: uppercase;
-}
-
-.cta-button:hover {
-  background: #ffc94a;
-  transform: translateY(-2px);
-  box-shadow: 0px 5px 15px rgba(240, 180, 41, 0.3);
-}
+.about-box h2 { color: var(--accent); margin-bottom: 15px; }
 
 /* ---------- Footer ---------- */
 footer {
-  background: #090b0e;
-  color: var(--text);
   text-align: center;
-  padding: 40px 20px;
-  font-size: 0.85rem;
-  border-top: 1px solid rgba(255,255,255,0.05);
+  padding: 40px;
+  background: #090b0e;
+  font-size: 0.8rem;
+  opacity: 0.6;
 }
 
-/* ---------- Responsiivisuus (Mobiili) ---------- */
+/* ---------- Mobiili ---------- */
 @media (max-width: 768px) {
-  .navbar {
-    padding: 15px 20px;
-    flex-direction: column; /* Pinotaan logo ja navi puhelimella */
-    gap: 10px;
-  }
-
-  .navbar nav {
-    gap: 10px;
-    flex-wrap: wrap; /* Linkit voivat rivittyä jos eivät mahdu */
-    justify-content: center;
-  }
-
-  .navbar nav a {
-    font-size: 0.75rem;
-  }
-
-  .hero h1 {
-    font-size: 2.5rem;
-  }
+  .navbar { flex-direction: column; gap: 10px; }
+  .hero h1 { font-size: 2.5rem; }
 }
+
 
 
 
