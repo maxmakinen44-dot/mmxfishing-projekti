@@ -5,120 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Galleria – mmxfishing</title>
   <link rel="stylesheet" href="style.css">
+  
   <style>
-    /* Hero-osio */
+    /* Lisää taustakuvan vain galleria-sivun hero-osioon */
     .hero {
-      height: 50vh;
-      background: url("hero-fishing.jpg") center/cover no-repeat;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-    .hero-overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.55);
-    }
-    .hero-content {
-      position: relative;
-      color: #eaeaea;
-      max-width: 800px;
-      padding: 0 20px;
-    }
-    .hero h1 {
-      font-size: 3.5rem;
-      margin-bottom: 20px;
-    }
-    .hero p {
-      font-size: 1.1rem;
-      opacity: 0.9;
-    }
-    .underline {
-      width: 120px;
-      height: 4px;
-      background: #f0b429;
-      margin: 0 auto 25px auto;
-    }
-
-    /* Galleria */
-    .gallery {
-      max-width: 1200px;
-      margin: 40px auto;
-      padding: 0 20px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    .gallery-item {
-      background-color: #151a21;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-    }
-    .gallery-item img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      display: block;
-    }
-    .gallery-item p {
-      padding: 10px;
-      font-size: 0.95rem;
-      text-align: center;
-      color: #eaeaea;
+      background-image: url("vene.png"); /* Tai jokin muu kuva, esim. "galleria.jpg" */
     }
   </style>
 </head>
 <body>
 
-<header class="navbar">
- <a href="index.html" class="logo">mmxfishing</a>
-  <nav>
-    <a href="index.html">ETUSIVU</a>
-    <a href="opasesittely.html">OPASESITTELY</a>
-    <a href="kalastusmatkat.html">KALASTUSMATKAT</a>
-    <a href="galleria.html" class="active">GALLERIA</a>
-  </nav>
-</header>
+  <header class="navbar">
+    <a href="index.html" class="logo">mmxfishing</a>
+    <nav>
+      <a href="index.html">ETUSIVU</a>
+      <a href="opasesittely.html">OPASESITTELY</a>
+      <a href="kalastusmatkat.html">KALASTUSMATKAT</a>
+      <a href="galleria.html" class="active">GALLERIA</a>
+    </nav>
+  </header>
 
-<section class="hero">
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <h1>Galleria</h1>
-    <div class="underline"></div>
-    <p>Hetkiä kalastusreissuilta Suomen upeilla vesillä</p>
-  </div>
-</section>
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Galleria</h1>
+      <div class="underline"></div>
+      <p>Kuvia ja tunnelmia menneiltä reissuilta.</p>
+    </div>
+  </section>
 
-<section class="gallery">
-  <div class="gallery-item">
-    <img src="kuvat/kuva4.jpg" alt="Heittokalastus aamulla">
-    <p>Heittokalastus aamulla</p>
-  </div>
-
-  <div class="gallery-item">
-    <img src="kuvat/kuva3.jpg" alt="Kalastusretki sisävesillä">
-    <p>Kalastusretki sisävesillä</p>
-  </div>
-
-  <div class="gallery-item">
-    <img src="kuvat/kuva2.jpg" alt="Ahvenkalastus rannalta">
-    <p>Ahvenkalastus rannalta</p>
-  </div>
-
-  <div class="gallery-item">
-    <img src="kuvat/kuva1.jpg" alt="Merikalastus hyvissä olosuhteissa">
-    <p>Merikalastus hyvissä olosuhteissa</p>
-  </div>
-</section>
-
-<footer>
-  © 2026 mmxfishing – Vastuullista kalastusta
-</footer>
-
-</body>
+  </body>
 </html>
-
 
