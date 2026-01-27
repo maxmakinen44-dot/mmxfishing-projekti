@@ -5,11 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Galleria – mmxfishing</title>
   <link rel="stylesheet" href="style.css">
-  
   <style>
-    /* Lisää taustakuvan vain galleria-sivun hero-osioon */
+    /* Pakotetaan taustakuva näkymään tällä sivulla */
     .hero {
-      background-image: url("vene.png"); /* Tai jokin muu kuva, esim. "galleria.jpg" */
+      background-image: url("vene.png");
+    }
+
+    /* Gallerian oma ruudukko */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .gallery-item {
+      overflow: hidden;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item img:hover {
+      transform: scale(1.05);
     }
   </style>
 </head>
@@ -34,6 +61,21 @@
     </div>
   </section>
 
-  </body>
+  <main>
+    <div class="gallery-grid">
+      <div class="gallery-item"><img src="jättihauki.jpeg" alt="Hauki"></div>
+      <div class="gallery-item"><img src="kuha.jpeg" alt="Kuha"></div>
+      <div class="gallery-item"><img src="iltasyönti.jpeg" alt="Maisema"></div>
+      <div class="gallery-item"><img src="meritaimen.jpeg" alt="Taimen"></div>
+      <div class="gallery-item"><img src="pilkki.jpeg" alt="Talvi"></div>
+      <div class="gallery-item"><img src="vene.png" alt="Vene"></div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 mmxfishing – Vastuullista kalastusta</p>
+  </footer>
+
+</body>
 </html>
 
