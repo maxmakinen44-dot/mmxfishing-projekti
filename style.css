@@ -58,7 +58,6 @@
 /* ---------- Hero-osio ---------- */
 .hero {
   height: 100vh;
-  /* Varmista, että tallensit kuvan tällä nimellä samaan kansioon */
   background: url("vene.png") center/cover no-repeat;
   position: relative;
   display: flex;
@@ -70,7 +69,7 @@
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4); /* Pehmentää kuvaa, jotta teksti nousee esiin */
+  background: rgba(0, 0, 0, 0.4); 
 }
 
 .hero-content {
@@ -78,9 +77,9 @@
   color: var(--text);
   max-width: 800px;
   padding: 40px;
-  background: rgba(0, 0, 0, 0.6); /* Tumma läpinäkyvä tausta tekstin taakse */
-  border-radius: 12px;           /* Pyöristetyt kulmat */
-  backdrop-filter: blur(5px);    /* Kevyt sumennus taustalla (moderni efekti) */
+  background: rgba(0, 0, 0, 0.6); 
+  border-radius: 12px;           
+  backdrop-filter: blur(5px);   
 }
 
 .hero h1 {
@@ -201,4 +200,5 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
 
