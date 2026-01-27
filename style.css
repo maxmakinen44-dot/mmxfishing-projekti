@@ -185,4 +185,29 @@ footer {
   font-size: 0.85rem;
   border-top: 1px solid rgba(255,255,255,0.05);
 }
+/* ---------- Responsiivisuus (Mobiililaitteet) ---------- */
+@media (max-width: 768px) {
+  .navbar {
+    position: relative; /* Muutetaan mobiilissa pois kiinteästä paikasta, jos se peittää tekstiä */
+    flex-direction: column;
+    padding: 10px;
+  }
+}
+
+  .navbar nav {
+    margin-top: 10px;
+    gap: 10px; /* Pienentää linkkien väliä mobiilissa */
+    flex-wrap: wrap; /* Sallii linkkien rivittyä, jos ne eivät mahdu yhdelle riville */
+    justify-content: center;
+  }
+
+  .navbar nav a {
+    font-size: 0.75rem; /* Hieman pienempi teksti kännykällä */
+    padding: 5px;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem; /* Pienentää ison otsikon mahtumaan ruudulle */
+  }
+}
 
