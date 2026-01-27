@@ -5,36 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Galleria – mmxfishing</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    /* Pidetään vain gallerian ruudukkoon liittyvät tyylit tässä, 
-       jotta ne eivät sotke muita sivuja */
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 15px;
-      padding: 40px 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .gallery-item {
-      overflow: hidden;
-      border-radius: 8px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .gallery-item img {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.3s ease;
-    }
-
-    .gallery-item img:hover {
-      transform: scale(1.05);
-    }
-  </style>
 </head>
 <body>
 
@@ -54,18 +24,33 @@
     <div class="hero-content">
       <h1>Galleria</h1>
       <div class="underline"></div>
-      <p>Kuvia ja tunnelmia menneiltä reissuilta.</p>
+      <p>Hetkiä kalastusreissuilta Suomen upeilla vesillä</p>
     </div>
   </section>
 
   <main>
-    <div class="gallery-grid">
-      <div class="gallery-item"><img src="jättihauki.jpeg" alt="Hauki"></div>
-      <div class="gallery-item"><img src="kuha.jpeg" alt="Kuha"></div>
-      <div class="gallery-item"><img src="iltasyönti.jpeg" alt="Maisema"></div>
-      <div class="gallery-item"><img src="meritaimen.jpeg" alt="Taimen"></div>
-      <div class="gallery-item"><img src="pilkki.jpeg" alt="Talvi"></div>
-      <div class="gallery-item"><img src="vene.png" alt="Vene"></div>
+    <div class="tuote-alue">
+      
+      <div class="tuote-kortti">
+        <img src="kuvat/kuva4.jpg" alt="Heittokalastus aamulla">
+        <p>Heittokalastus aamulla</p>
+      </div>
+
+      <div class="tuote-kortti">
+        <img src="kuvat/kuva3.jpg" alt="Kalastusretki sisävesillä">
+        <p>Kalastusretki sisävesillä</p>
+      </div>
+
+      <div class="tuote-kortti">
+        <img src="kuvat/kuva2.jpg" alt="Ahvenkalastus rannalta">
+        <p>Ahvenkalastus rannalta</p>
+      </div>
+
+      <div class="tuote-kortti">
+        <img src="kuvat/kuva1.jpg" alt="Merikalastus hyvissä olosuhteissa">
+        <p>Merikalastus hyvissä olosuhteissa</p>
+      </div>
+
     </div>
   </main>
 
@@ -75,4 +60,5 @@
 
 </body>
 </html>
+
 
